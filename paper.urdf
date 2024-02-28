@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<robot name="paper">
+  <link name="base_link">
+    <visual>
+      <geometry>
+        <box size="1 1 0.001"/>
+      </geometry>
+      <material name="white">
+        <color rgba="1 0 0 1"/>
+      </material>
+    </visual>
+    <collision>
+      <geometry>
+        <box size="1 1 0.001"/>
+      </geometry>
+    </collision>
+  </link>
+</robot>
+
+
