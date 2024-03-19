@@ -3,8 +3,8 @@ from openpyxl import load_workbook
 wb1 = load_workbook('общая.xlsx')
 wb2 = load_workbook('фкит.xlsx')
 
-surname_idx1 = 1
-surname_idx2 = 3
+surname_idx1 = 2
+surname_idx2 = 2
 
 if __name__ == '__main__':
 	sheet1 = wb1.active
@@ -12,7 +12,7 @@ if __name__ == '__main__':
 
 	for row in sheet1.iter_rows():
 		for cell in row:
-			if cell.value == 'фкит':
+			if cell.value == ' ':
 				row_data = [cell.value for cell in row]
 				break
 
@@ -22,4 +22,4 @@ if __name__ == '__main__':
 		else:
 			sheet2.append(row_data)
 
-	wb2.save('table2.xlsx')
+	wb2.save('фкит.xlsx')
